@@ -1,0 +1,85 @@
+/* Custom styles & animations */
+@layer utilities {
+  .bg-navy-750 {
+    background-color: #17233d;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #060a12;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}
+
+/* Glassmorphism & Cards */
+.skill-card {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.skill-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  background-color: rgba(15, 23, 42, 0.8);
+  color: #94a3b8;
+  border: 1px solid rgba(51, 65, 85, 0.6);
+  transition: all 0.2s ease;
+}
+
+.skill-tag:hover {
+  border-color: rgba(16, 185, 129, 0.5);
+  color: #34d399;
+  background-color: rgba(16, 185, 129, 0.08);
+}
+
+.pill-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  background-color: rgba(15, 23, 42, 0.9);
+  color: #cbd5e1;
+  border: 1px solid rgba(51, 65, 85, 0.7);
+}
+
+/* Filter buttons */
+.filter-btn.active {
+  background-color: #10b981 !important;
+  color: #060a12 !important;
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.35);
+}
+
+/* Glowing tilt animation */
+@keyframes tilt {
+  0%, 50%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(0.8deg);
+  }
+  75% {
+    transform: rotate(-0.8deg);
+  }
+}
+.animate-tilt {
+  animation: tilt 8s infinite linear;
+}
+
+/* Smooth active nav link highlight */
+.nav-link.active-nav {
+  color: #34d399;
+  background-color: rgba(16, 185, 129, 0.12);
+}
